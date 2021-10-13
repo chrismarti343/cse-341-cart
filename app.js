@@ -33,6 +33,13 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
+const corsOptions = {
+  origin: "https://cse341-prov04.herokuapp.com/",
+  optionsSuccessStatus: 200
+  };
+  app.use(cors(corsOptions));
+  
+
 const options = {
   useUnifiedTopology: true,
   useNewUrlParser: true,
